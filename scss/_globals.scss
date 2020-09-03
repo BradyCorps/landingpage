@@ -1,0 +1,61 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+
+}
+
+.light {
+  background: $white;
+}
+
+.dark {
+  background: $vdb-bg;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.3rem;
+
+}
+
+.flex {
+
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+.border-bottom {
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+.gb {
+  &-d {
+    color: $grayblue-dark;
+  }
+
+  &-bold {
+    font-weight: 700;
+  }
+
+  &-small {
+    font-size: 14px;
+  }
+}
