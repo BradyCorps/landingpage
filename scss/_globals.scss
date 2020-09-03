@@ -1,10 +1,3 @@
-html {
-  font-size: 100%;
-  box-sizing: border-box;
-  padding: 1rem;
-
-}
-
 .light {
   background: $white;
 }
@@ -13,15 +6,11 @@ html {
   background: $vdb-bg;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.3rem;
+  padding: 1rem 4rem 1rem 4rem;
 
 }
 
