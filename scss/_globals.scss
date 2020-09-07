@@ -1,9 +1,481 @@
-.light {
-  background: $white;
+.darkmode {
+  background-color: $vdb-bg;
+  // Main Card
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+
+    &-row {
+      margin-top: 2rem;
+
+      @include breakpoint-down(small) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .card {
+    width: 21vw;
+    height: 100%;
+    background: $grayblue-light;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+    &-facebook {
+      border-top: 0.3rem solid hsl(208, 92%, 53%);
+    }
+
+    &-twitter {
+      border-top: 0.3rem solid hsl(203, 89%, 53%);
+    }
+
+    &-instagram {
+      border-top: 0.3rem solid hsl(37, 97%, 70%);
+      border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1 stretch;
+    }
+
+    &-youtube {
+      border-top: 0.3rem solid hsl(348, 97%, 39%);
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-flow: column wrap;
+      align-content: center;
+      justify-content: center;
+
+      &:hover {
+        background: lighten($dark-desaturated, 3%);
+      }
+
+
+      .username {
+        margin-top: 2rem;
+        color: $grayblue-dark;
+        font-size: 12px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        img {
+          margin-right: 0.7rem;
+        }
+      }
+    }
+
+    &-total {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+
+      h1 {
+        font-size: 4rem;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+        padding-bottom: 1.7rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0;
+        text-transform: uppercase;
+        color: $grayblue-dark;
+        letter-spacing: 0.4rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-followers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+
+
+      img {
+        padding-right: 0.3rem;
+        height: 0.5rem;
+        width: 0.5rem;
+      }
+    }
+
+    .down {
+      color: hsl(356, 69%, 56%);
+    }
+
+    .rise {
+      color: hsl(163, 72%, 41%);
+
+    }
+
+    @include breakpoint-down(small) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+  }
+
+  // Overview Card 
+
+  .overview-heading {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+
+    .overview-card {
+      width: 20vw;
+      height: auto;
+      border-radius: 0.3rem;
+      padding: 1rem 0 1rem 0;
+      cursor: pointer;
+
+      &:hover {
+        background: lighten($dark-desaturated, 3%);
+      }
+
+      @include breakpoint-down(small) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      .mobile-wrapper {
+        padding: 0.3rem;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        justify-content: center;
+
+        .first-row {
+          width: 75%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+
+          img {
+            height: 10%;
+            width: 10%;
+          }
+        }
+
+        .second-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1rem;
+
+          .total {
+            font-size: 2.5rem;
+          }
+
+          .rise {
+            display: flex;
+            align-items: center;
+            color: $rise;
+            font-weight: bold;
+            font-size: 14px;
+
+            img {
+              margin-right: 0.2rem;
+            }
+          }
+
+          .down {
+            display: flex;
+            align-items: center;
+            color: $down;
+            font-weight: bold;
+            font-size: 14px;
+
+            img {
+              margin-right: 0.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: $white-text;
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    color: $text-dark;
+    margin: 0;
+  }
+
+  .overview-card {
+    background-color: $dark-desaturated;
+  }
+
+  .card-wrapper {
+    background-color: $dark-desaturated;
+  }
 }
 
-.dark {
-  background: $vdb-bg;
+
+
+// Light Mode
+
+.lightmode {
+  background-color: $white;
+
+  // Main Card
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+
+    &-row {
+      margin-top: 2rem;
+
+      @include breakpoint-down(small) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .card {
+    width: 21vw;
+    height: 100%;
+    background: $grayblue-light;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+    &-facebook {
+      border-top: 0.3rem solid hsl(208, 92%, 53%);
+    }
+
+    &-twitter {
+      border-top: 0.3rem solid hsl(203, 89%, 53%);
+    }
+
+    &-instagram {
+      border-top: 0.3rem solid hsl(37, 97%, 70%);
+      border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1 stretch;
+    }
+
+    &-youtube {
+      border-top: 0.3rem solid hsl(348, 97%, 39%);
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-flow: column wrap;
+      align-content: center;
+      justify-content: center;
+
+      &:hover {
+        background: darken($grayblue-light, 5%);
+      }
+
+
+      .username {
+        margin-top: 2rem;
+        color: $grayblue-dark;
+        font-size: 12px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        img {
+          margin-right: 0.7rem;
+        }
+      }
+    }
+
+    &-total {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+
+      h1 {
+        font-size: 4rem;
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+        padding-bottom: 1.7rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0;
+        text-transform: uppercase;
+        color: $grayblue-dark;
+        letter-spacing: 0.4rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-followers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+
+
+      img {
+        padding-right: 0.3rem;
+        height: 0.5rem;
+        width: 0.5rem;
+      }
+    }
+
+    .down {
+      color: hsl(356, 69%, 56%);
+    }
+
+    .rise {
+      color: hsl(163, 72%, 41%);
+
+    }
+
+    @include breakpoint-down(small) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+  }
+
+  // Overview Card 
+
+  .overview-heading {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+
+    .overview-card {
+      width: 20vw;
+      height: auto;
+      border-radius: 0.3rem;
+      padding: 1rem 0 1rem 0;
+      cursor: pointer;
+
+      &:hover {
+        background: darken($grayblue-light, 5%);
+      }
+
+      @include breakpoint-down(small) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      .mobile-wrapper {
+        padding: 0.3rem;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        justify-content: center;
+
+        .first-row {
+          width: 75%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+
+          img {
+            height: 10%;
+            width: 10%;
+          }
+        }
+
+        .second-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1rem;
+
+          .total {
+            font-size: 2.5rem;
+          }
+
+          .rise {
+            display: flex;
+            align-items: center;
+            color: $rise;
+            font-weight: bold;
+            font-size: 14px;
+
+            img {
+              margin-right: 0.2rem;
+            }
+          }
+
+          .down {
+            display: flex;
+            align-items: center;
+            color: $down;
+            font-weight: bold;
+            font-size: 14px;
+
+            img {
+              margin-right: 0.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: $vdb-text;
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    color: $grayblue-dark;
+    margin: 0;
+  }
+
+  .overview-card {
+    background-color: $grayblue-light;
+  }
+
+  .card-wrapper {
+    background-color: $grayblue-light;
+  }
+
 }
 
 
@@ -12,10 +484,13 @@ body {
   line-height: 1.3rem;
   padding: 1rem 4rem 1rem 4rem;
 
+  @include breakpoint-down(small) {
+    padding: 1rem;
+  }
+
 }
 
 .flex {
-
 
   &-jc-sb {
     justify-content: space-between;
@@ -30,10 +505,7 @@ body {
   }
 }
 
-.border-bottom {
-  padding-bottom: 5px;
-  border-bottom: 1px solid black;
-}
+
 
 .gb {
   &-d {
@@ -46,5 +518,22 @@ body {
 
   &-small {
     font-size: 14px;
+  }
+}
+
+
+
+
+.attribution {
+  display: flex;
+  margin-top: 15rem;
+}
+
+.mobile {
+
+  @include breakpoint-down(small) {
+    flex-direction: column;
+    align-items: center;
+
   }
 }
